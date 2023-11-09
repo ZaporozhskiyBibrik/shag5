@@ -1,0 +1,22 @@
+class ParentClass:
+  shared_attribute = "Hello world"
+  def shared_method(self):
+      print("_Hello world.")
+class Class1(ParentClass):
+  child1_attribute = "__Hello world"
+  def child1_method(self):
+      print("Bye")
+class Class2(ParentClass):
+  child2_attribute = "_Bye"
+  def child2_method(self):
+      print("Back, world.")
+child1 = Class1()
+print(child1.shared_attribute)     
+print(child1.child1_attribute)     
+child1.shared_method()             
+child1.child1_method()              
+class2 = Class2()
+print(class2.shared_attribute)     
+print(class2.child2_attribute)    
+class2.shared_method()            
+class2.child2_method()
